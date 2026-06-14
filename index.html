@@ -3,16 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="AgroMIP: guia informacional sobre Manejo Integrado de Pragas para o projeto Agrinho."
-    />
+    <meta name="description" content="AgroMIP: guia informacional sobre Manejo Integrado de Pragas para o projeto Agrinho." />
     <title>AgroMIP | Guia de Manejo Integrado de Pragas</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="light">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
+    <!-- ── HEADER ───────────────────────────────────────── -->
     <header class="site-header">
       <div class="topbar">
         <span>Projeto Agrinho 2026</span>
@@ -32,71 +30,109 @@
           <a href="#problema">Problema</a>
           <a href="#metodo">Método</a>
           <a href="#culturas">Culturas</a>
+          <a href="#galeria">Galeria</a>
           <a href="#decisor">Decisão</a>
           <a href="#glossario">Glossário</a>
           <a href="#checklist">Checklist</a>
           <a href="#fontes">Fontes</a>
         </nav>
 
-        <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Abrir menu</span>
-        </button>
+        <div class="nav-actions">
+          <!-- Saudação ao usuário -->
+          <span id="greeting" class="greeting" aria-live="polite"></span>
+
+          <!-- Toggle modo escuro -->
+          <button id="theme-toggle" class="icon-btn" aria-label="Alternar modo escuro e claro" title="Alternar tema">
+            <span id="theme-icon">🌙</span>
+          </button>
+
+          <!-- Hamburguer -->
+          <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+            <span class="sr-only">Abrir menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de nome do usuário (aparece na primeira visita) -->
+      <div class="name-bar" id="name-bar">
+        <div class="name-bar-inner">
+          <label for="user-name-input">👋 Como podemos te chamar?</label>
+          <input type="text" id="user-name-input" placeholder="Digite seu nome…" maxlength="40" autocomplete="given-name" />
+          <button type="button" id="save-name-btn" class="button primary small">Salvar</button>
+        </div>
       </div>
     </header>
 
+    <!-- ── MAIN ─────────────────────────────────────────── -->
     <main id="conteudo">
+
+      <!-- HERO -->
       <section class="hero" id="inicio">
         <div class="hero-content">
           <p class="eyebrow">Observação, decisão e controle responsável</p>
           <h1>Manejo Integrado de Pragas para produzir melhor, com menos desperdício.</h1>
           <p>
-            O MIP ajuda a decidir quando agir, qual tática usar e como reduzir aplicações desnecessárias. A ideia não é eliminar toda forma de vida da lavoura, mas manter as pragas abaixo do nível que causa prejuízo.
+            O MIP ajuda a decidir quando agir, qual tática usar e como reduzir aplicações
+            desnecessárias. A ideia não é eliminar toda forma de vida da lavoura, mas manter
+            as pragas abaixo do nível que causa prejuízo.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#metodo">Ver método</a>
             <a class="button secondary" href="#decisor">Usar matriz de decisão</a>
           </div>
         </div>
+
+        <!-- Imagem hero -->
+        <div class="hero-img-wrap" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80"
+            alt="Lavoura verde ao amanhecer representando agricultura sustentável"
+            loading="eager"
+          />
+        </div>
       </section>
 
+      <!-- BANDA RESUMO -->
       <section class="summary-band" aria-label="Resumo do MIP">
-        <article>
+        <article class="reveal">
           <span>01</span>
           <h2>Identificar</h2>
           <p>Distinguir praga, dano, doença e inimigo natural antes de escolher qualquer controle.</p>
         </article>
-        <article>
+        <article class="reveal">
           <span>02</span>
           <h2>Monitorar</h2>
           <p>Acompanhar a população no campo com registros, frequência e pontos de amostragem.</p>
         </article>
-        <article>
+        <article class="reveal">
           <span>03</span>
           <h2>Decidir</h2>
           <p>Comparar a infestação com o nível de ação e o estágio da cultura.</p>
         </article>
-        <article>
+        <article class="reveal">
           <span>04</span>
           <h2>Avaliar</h2>
           <p>Registrar o resultado para melhorar a próxima decisão e evitar repetição de erro.</p>
         </article>
       </section>
 
+      <!-- PROBLEMA -->
       <section class="section split-section" id="problema">
-        <div class="section-copy">
+        <div class="section-copy reveal">
           <p class="section-kicker">Por que isso importa</p>
           <h2>Aplicar por costume pode sair caro para a lavoura e para o ambiente.</h2>
           <p>
-            O controle de pragas precisa considerar custo, eficiência, resistência, saúde do solo, água e organismos benéficos. Um inseticida usado cedo demais pode reduzir inimigos naturais e abrir espaço para novas infestações.
+            O controle de pragas precisa considerar custo, eficiência, resistência, saúde do solo,
+            água e organismos benéficos. Um inseticida usado cedo demais pode reduzir inimigos
+            naturais e abrir espaço para novas infestações.
           </p>
           <p>
-            Em uma lógica parecida com a de portais técnicos do agro, este site organiza o assunto em diagnóstico, decisão e prática. Ele não substitui orientação agronômica, mas ajuda estudantes e produtores a entenderem o raciocínio correto.
+            Este site organiza o assunto em diagnóstico, decisão e prática. Ele não substitui
+            orientação agronômica, mas ajuda estudantes e produtores a entenderem o raciocínio correto.
           </p>
         </div>
-        <div class="field-panel" aria-label="Pontos de atenção no campo">
+        <div class="field-panel reveal" aria-label="Pontos de atenção no campo">
           <h3>Antes de controlar, pergunte:</h3>
           <ul class="attention-list">
             <li>A espécie foi identificada corretamente?</li>
@@ -108,37 +144,39 @@
         </div>
       </section>
 
+      <!-- MÉTODO -->
       <section class="section method-section" id="metodo">
         <div class="section-heading">
           <p class="section-kicker">Como funciona</p>
           <h2>O MIP é um ciclo de decisão, não uma receita pronta.</h2>
           <p>
-            A força do método está em combinar técnicas. Controle cultural, biológico, físico e químico podem fazer parte da estratégia, desde que a decisão venha do monitoramento.
+            A força do método está em combinar técnicas. Controle cultural, biológico, físico e
+            químico podem fazer parte da estratégia, desde que a decisão venha do monitoramento.
           </p>
         </div>
 
         <div class="timeline">
-          <article>
+          <article class="reveal">
             <span>1</span>
             <h3>Conheça a área</h3>
             <p>Histórico de pragas, cultura anterior, plantas espontâneas, bordaduras e condições de solo ajudam a prever riscos.</p>
           </article>
-          <article>
+          <article class="reveal">
             <span>2</span>
             <h3>Identifique o organismo</h3>
             <p>Nem todo inseto é praga. Joaninhas, vespinhas parasitoides e outros predadores podem ser aliados.</p>
           </article>
-          <article>
+          <article class="reveal">
             <span>3</span>
             <h3>Monitore com método</h3>
             <p>Observe pontos diferentes da área, registre estádio da planta, quantidade de indivíduos e tipo de dano.</p>
           </article>
-          <article>
+          <article class="reveal">
             <span>4</span>
             <h3>Compare com o nível de ação</h3>
             <p>A intervenção deve ocorrer quando a população ameaça causar prejuízo econômico ou perda relevante.</p>
           </article>
-          <article>
+          <article class="reveal">
             <span>5</span>
             <h3>Controle e avalie</h3>
             <p>Escolha a tática de menor risco efetivo, registre a ação e volte ao campo para medir o resultado.</p>
@@ -146,166 +184,282 @@
         </div>
       </section>
 
+      <!-- CULTURAS -->
       <section class="section crops-section" id="culturas">
         <div class="section-heading left">
           <p class="section-kicker">Consulta rápida</p>
           <h2>Culturas, pragas e aliados naturais.</h2>
           <p>
-            Exemplos para estudo. Os níveis de ação variam conforme região, cultivar, estágio da cultura e recomendação técnica local.
+            Exemplos para estudo. Os níveis de ação variam conforme região, cultivar, estágio
+            da cultura e recomendação técnica local.
           </p>
         </div>
 
         <div class="tabs" role="tablist" aria-label="Culturas">
-          <button class="tab active" type="button" role="tab" aria-selected="true" data-crop="soja">Soja</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-crop="milho">Milho</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-crop="hortalicas">Hortaliças</button>
+          <button class="tab active" type="button" role="tab" aria-selected="true"  data-crop="soja">Soja</button>
+          <button class="tab"        type="button" role="tab" aria-selected="false" data-crop="milho">Milho</button>
+          <button class="tab"        type="button" role="tab" aria-selected="false" data-crop="hortalicas">Hortaliças</button>
         </div>
 
         <div class="crop-grid">
           <article class="crop-card crop-panel active" data-panel="soja">
-            <img src="assets/img/soja-saudavel.svg" alt="Ilustração de lavoura de soja saudável" />
+            <img
+              src="https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=700&q=80"
+              alt="Lavoura de soja saudável com vagens formadas"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Soja</p>
               <h3>Percevejos e lagartas exigem monitoramento frequente.</h3>
               <dl>
-                <div>
-                  <dt>Observar</dt>
-                  <dd>Vagens, folhas novas, desfolha, pontos de bordadura e presença de ninfas.</dd>
-                </div>
-                <div>
-                  <dt>Aliados</dt>
-                  <dd>Parasitoides de ovos, predadores e microrganismos entomopatogênicos.</dd>
-                </div>
-                <div>
-                  <dt>Boa prática</dt>
-                  <dd>Evitar aplicação preventiva sem amostragem e preservar áreas com diversidade vegetal.</dd>
-                </div>
+                <div><dt>Observar</dt><dd>Vagens, folhas novas, desfolha, pontos de bordadura e presença de ninfas.</dd></div>
+                <div><dt>Aliados</dt><dd>Parasitoides de ovos, predadores e microrganismos entomopatogênicos.</dd></div>
+                <div><dt>Boa prática</dt><dd>Evitar aplicação preventiva sem amostragem e preservar áreas com diversidade vegetal.</dd></div>
               </dl>
             </div>
           </article>
 
           <article class="crop-card crop-panel" data-panel="milho">
-            <img src="assets/img/milho-saudavel.svg" alt="Ilustração de lavoura de milho produtiva" />
+            <img
+              src="https://images.unsplash.com/photo-1601593346740-925612772716?w=700&q=80"
+              alt="Espigas de milho em lavoura produtiva"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Milho</p>
               <h3>A lagarta-do-cartucho pede atenção no início do desenvolvimento.</h3>
               <dl>
-                <div>
-                  <dt>Observar</dt>
-                  <dd>Raspagens, furos nas folhas, cartucho, fezes e diferença entre plantas atacadas.</dd>
-                </div>
-                <div>
-                  <dt>Aliados</dt>
-                  <dd>Trichogramma, percevejos predadores, tesourinhas e fungos entomopatogênicos.</dd>
-                </div>
-                <div>
-                  <dt>Boa prática</dt>
-                  <dd>Integrar tratamento adequado, monitoramento no cartucho e rotação de modos de ação.</dd>
-                </div>
+                <div><dt>Observar</dt><dd>Raspagens, furos nas folhas, cartucho, fezes e diferença entre plantas atacadas.</dd></div>
+                <div><dt>Aliados</dt><dd>Trichogramma, percevejos predadores, tesourinhas e fungos entomopatogênicos.</dd></div>
+                <div><dt>Boa prática</dt><dd>Integrar tratamento adequado, monitoramento no cartucho e rotação de modos de ação.</dd></div>
               </dl>
             </div>
           </article>
 
           <article class="crop-card crop-panel" data-panel="hortalicas">
-            <img src="assets/img/joaninha.svg" alt="Ilustração de joaninha, predadora natural" />
+            <img
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=700&q=80"
+              alt="Horta com hortaliças variadas e saudáveis"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Hortaliças</p>
               <h3>Pulgões, mosca-branca e tripes crescem rápido em ambiente favorável.</h3>
               <dl>
-                <div>
-                  <dt>Observar</dt>
-                  <dd>Face inferior das folhas, brotações, amarelecimento, fumagina e plantas vizinhas.</dd>
-                </div>
-                <div>
-                  <dt>Aliados</dt>
-                  <dd>Joaninhas, crisopídeos, parasitoides e fungos benéficos.</dd>
-                </div>
-                <div>
-                  <dt>Boa prática</dt>
-                  <dd>Usar barreiras, manejo de plantas hospedeiras e controle seletivo quando necessário.</dd>
-                </div>
+                <div><dt>Observar</dt><dd>Face inferior das folhas, brotações, amarelecimento, fumagina e plantas vizinhas.</dd></div>
+                <div><dt>Aliados</dt><dd>Joaninhas, crisopídeos, parasitoides e fungos benéficos.</dd></div>
+                <div><dt>Boa prática</dt><dd>Usar barreiras, manejo de plantas hospedeiras e controle seletivo quando necessário.</dd></div>
               </dl>
             </div>
           </article>
         </div>
       </section>
 
+      <!-- GALERIA -->
+      <section class="section gallery-section" id="galeria">
+        <div class="section-heading left">
+          <p class="section-kicker">Reconhecimento visual</p>
+          <h2>Pragas, aliados e lavouras em imagens.</h2>
+          <p>Identificar corretamente evita confundir dano, praga e aliado natural.</p>
+        </div>
+
+        <div class="gallery-filters" role="group" aria-label="Filtrar galeria">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="praga">Pragas</button>
+          <button class="filter-btn" data-filter="aliado">Aliados</button>
+          <button class="filter-btn" data-filter="lavoura">Lavouras</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+
+          <article class="gallery-card reveal" data-category="praga">
+            <div class="gallery-img-wrap">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Spodoptera_frugiperda_caterpillar.jpg/640px-Spodoptera_frugiperda_caterpillar.jpg"
+                alt="Lagarta-do-cartucho Spodoptera frugiperda em folha de milho"
+                loading="lazy"
+              />
+              <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
+            </div>
+            <div class="gallery-info">
+              <span class="tag">Praga</span>
+              <h3>Lagarta-do-cartucho</h3>
+              <p><em>Spodoptera frugiperda</em> — principal praga do milho no Brasil.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card reveal" data-category="praga">
+            <div class="gallery-img-wrap">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Euschistus_heros_MHNT.jpg/640px-Euschistus_heros_MHNT.jpg"
+                alt="Percevejo-marrom Euschistus heros sobre superfície"
+                loading="lazy"
+              />
+              <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
+            </div>
+            <div class="gallery-info">
+              <span class="tag">Praga</span>
+              <h3>Percevejo-marrom</h3>
+              <p><em>Euschistus heros</em> — suga grãos de soja causando perdas significativas.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card reveal" data-category="aliado">
+            <div class="gallery-img-wrap">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coccinella_magnifica01.jpg/640px-Coccinella_magnifica01.jpg"
+                alt="Joaninha Cycloneda sanguinea sobre folha verde"
+                loading="lazy"
+              />
+              <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
+            </div>
+            <div class="gallery-info">
+              <span class="tag">Aliado Natural</span>
+              <h3>Joaninha</h3>
+              <p>Predadora natural de pulgões e cochonilhas em diversas culturas.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card reveal" data-category="aliado">
+            <div class="gallery-img-wrap">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Chrysoperla_carnea_Stephens%2C_1836.jpg/640px-Chrysoperla_carnea_Stephens%2C_1836.jpg"
+                alt="Crisopídeo Chrysoperla carnea, inseto verde de asas transparentes"
+                loading="lazy"
+              />
+              <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
+            </div>
+            <div class="gallery-info">
+              <span class="tag">Aliado Natural</span>
+              <h3>Crisopídeo</h3>
+              <p><em>Chrysoperla carnea</em> — predador de ovos e larvas de diversas pragas.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card reveal" data-category="lavoura">
+            <div class="gallery-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=640&q=75"
+                alt="Lavoura de soja verde saudável ao sol"
+                loading="lazy"
+              />
+              <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
+            </div>
+            <div class="gallery-info">
+              <span class="tag">Lavoura</span>
+              <h3>Soja Saudável</h3>
+              <p>Lavoura manejada com MIP — produtiva e com baixo uso de agrotóxicos.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card reveal" data-category="lavoura">
+            <div class="gallery-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1601593346740-925612772716?w=640&q=75"
+                alt="Espigas de milho amarelas prontas para colheita"
+                loading="lazy"
+              />
+              <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
+            </div>
+            <div class="gallery-info">
+              <span class="tag">Lavoura</span>
+              <h3>Milho Produtivo</h3>
+              <p>Monitoramento constante garante espigas mais cheias e menor custo de produção.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+          <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+          <img id="lightbox-img" src="" alt="" />
+          <p id="lightbox-caption"></p>
+        </div>
+      </section>
+
+      <!-- ORGANISMOS -->
       <section class="section organisms-section" aria-label="Organismos importantes no MIP">
         <div class="section-heading left">
           <p class="section-kicker">Reconhecimento no campo</p>
           <h2>Organismos que aparecem nas decisões de manejo.</h2>
-          <p>
-            Identificar corretamente evita confundir dano, praga e aliado natural. Estes exemplos ajudam a pensar como um técnico no campo.
-          </p>
+          <p>Identificar corretamente evita confundir dano, praga e aliado natural.</p>
         </div>
 
         <div class="organism-grid">
-          <article>
-            <img src="assets/img/lagarta.svg" alt="Ilustração de lagarta-do-cartucho" />
+          <article class="reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Spodoptera_frugiperda_caterpillar.jpg/640px-Spodoptera_frugiperda_caterpillar.jpg"
+              alt="Lagarta-do-cartucho Spodoptera frugiperda"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Praga</p>
               <h3>Lagarta-do-cartucho</h3>
               <p>Importante no milho. O monitoramento deve observar raspagens, furos, cartucho e intensidade do ataque.</p>
             </div>
           </article>
-          <article>
-            <img src="assets/img/percevejomarrom.svg" alt="Ilustração de percevejo-marrom" />
+          <article class="reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Euschistus_heros_MHNT.jpg/640px-Euschistus_heros_MHNT.jpg"
+              alt="Percevejo-marrom Euschistus heros"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Praga</p>
               <h3>Percevejo-marrom</h3>
               <p>Relevante na soja, especialmente em fases ligadas à formação de vagens e grãos.</p>
             </div>
           </article>
-          <article>
-            <img src="assets/img/tricograma.svg" alt="Ilustração de Trichogramma" />
+          <article class="reveal">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coccinella_magnifica01.jpg/640px-Coccinella_magnifica01.jpg"
+              alt="Joaninha predadora natural"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Aliado natural</p>
-              <h3>Trichogramma</h3>
-              <p>Microvespa parasitoide usada no controle biológico de ovos de algumas pragas agrícolas.</p>
+              <h3>Joaninha</h3>
+              <p>Predadora voraz de pulgões, cochonilhas e outros insetos-praga de corpo mole.</p>
             </div>
           </article>
         </div>
       </section>
 
+      <!-- DECISOR -->
       <section class="section decision-section" id="decisor">
         <div class="section-heading">
           <p class="section-kicker">Ferramenta educativa</p>
           <h2>Matriz simples de decisão.</h2>
           <p>
-            Preencha o cenário para receber uma orientação geral. Em situação real, confirme níveis de ação e produtos com assistência técnica habilitada.
+            Preencha o cenário para receber uma orientação geral. Em situação real, confirme
+            níveis de ação e produtos com assistência técnica habilitada.
           </p>
         </div>
 
         <div class="decision-layout">
           <form class="decision-form" id="decision-form">
-            <label>
-              Cultura
+            <label>Cultura
               <select id="crop-select">
                 <option value="soja">Soja</option>
                 <option value="milho">Milho</option>
                 <option value="hortalicas">Hortaliças</option>
               </select>
             </label>
-
-            <label>
-              Pressão da praga
+            <label>Pressão da praga
               <select id="pressure-select">
                 <option value="baixa">Baixa</option>
                 <option value="moderada">Moderada</option>
                 <option value="alta">Alta</option>
               </select>
             </label>
-
-            <label>
-              Inimigos naturais
+            <label>Inimigos naturais
               <select id="natural-select">
                 <option value="presentes">Presentes</option>
                 <option value="poucos">Poucos ou ausentes</option>
               </select>
             </label>
-
-            <label>
-              Estágio da cultura
+            <label>Estágio da cultura
               <select id="stage-select">
                 <option value="vegetativo">Vegetativo</option>
                 <option value="reprodutivo">Reprodutivo</option>
@@ -317,9 +471,7 @@
           <article class="recommendation" aria-live="polite">
             <p class="tag">Resultado</p>
             <h3 id="decision-title">Monitorar e registrar</h3>
-            <p id="decision-text">
-              Com pressão baixa e inimigos naturais presentes, a prioridade é continuar o monitoramento e evitar controle sem necessidade.
-            </p>
+            <p id="decision-text">Com pressão baixa e inimigos naturais presentes, a prioridade é continuar o monitoramento e evitar controle sem necessidade.</p>
             <ul id="decision-list">
               <li>Registrar pontos de amostragem.</li>
               <li>Reavaliar a lavoura em poucos dias.</li>
@@ -329,47 +481,28 @@
         </div>
       </section>
 
+      <!-- PRÁTICAS -->
       <section class="section practices-section" id="praticas">
         <div class="section-heading left">
           <p class="section-kicker">Estratégias</p>
           <h2>Táticas que podem entrar no plano de MIP.</h2>
         </div>
-
         <div class="practice-grid">
-          <article>
-            <h3>Controle cultural</h3>
-            <p>Rotação de culturas, época de semeadura, manejo de restos culturais, cultivares adaptadas e eliminação de plantas hospedeiras.</p>
-          </article>
-          <article>
-            <h3>Controle biológico</h3>
-            <p>Conservação ou liberação de parasitoides, predadores e microrganismos que reduzem a população da praga.</p>
-          </article>
-          <article>
-            <h3>Controle físico</h3>
-            <p>Armadilhas, barreiras, telas, retirada de plantas muito atacadas e manejo de focos iniciais.</p>
-          </article>
-          <article>
-            <h3>Controle químico criterioso</h3>
-            <p>Uso apenas quando necessário, com produto registrado, dose correta, tecnologia de aplicação e rotação de modo de ação.</p>
-          </article>
-          <article>
-            <h3>Registro de campo</h3>
-            <p>Anotações de praga, clima, estágio da cultura, decisão tomada e resultado observado depois da intervenção.</p>
-          </article>
-          <article>
-            <h3>Educação contínua</h3>
-            <p>Consulta a materiais técnicos, assistência agronômica e atualização sobre resistência e novas ferramentas.</p>
-          </article>
+          <article class="reveal"><h3>Controle cultural</h3><p>Rotação de culturas, época de semeadura, manejo de restos culturais, cultivares adaptadas e eliminação de plantas hospedeiras.</p></article>
+          <article class="reveal"><h3>Controle biológico</h3><p>Conservação ou liberação de parasitoides, predadores e microrganismos que reduzem a população da praga.</p></article>
+          <article class="reveal"><h3>Controle físico</h3><p>Armadilhas, barreiras, telas, retirada de plantas muito atacadas e manejo de focos iniciais.</p></article>
+          <article class="reveal"><h3>Controle químico criterioso</h3><p>Uso apenas quando necessário, com produto registrado, dose correta, tecnologia de aplicação e rotação de modo de ação.</p></article>
+          <article class="reveal"><h3>Registro de campo</h3><p>Anotações de praga, clima, estágio da cultura, decisão tomada e resultado observado depois da intervenção.</p></article>
+          <article class="reveal"><h3>Educação contínua</h3><p>Consulta a materiais técnicos, assistência agronômica e atualização sobre resistência e novas ferramentas.</p></article>
         </div>
       </section>
 
+      <!-- GLOSSÁRIO -->
       <section class="section glossary-section" id="glossario">
         <div class="section-heading left">
           <p class="section-kicker">Base de consulta</p>
           <h2>Glossário técnico do MIP.</h2>
-          <p>
-            Pesquise termos importantes para entender textos técnicos e relatórios de campo. O filtro abaixo funciona sem internet.
-          </p>
+          <p>Pesquise termos importantes para entender textos técnicos e relatórios de campo.</p>
         </div>
 
         <label class="search-box">
@@ -378,41 +511,22 @@
         </label>
 
         <div class="glossary-grid" id="glossary-grid">
-          <article data-keywords="mip manejo integrado pragas">
-            <h3>MIP</h3>
-            <p>Manejo Integrado de Pragas. Sistema que combina monitoramento, prevenção e diferentes formas de controle para reduzir perdas com menor impacto.</p>
-          </article>
-          <article data-keywords="nivel acao controle decisao">
-            <h3>Nível de ação</h3>
-            <p>Ponto em que a população da praga justifica uma intervenção para evitar prejuízo. Varia conforme cultura, praga e fase da planta.</p>
-          </article>
-          <article data-keywords="dano economico prejuizo custo">
-            <h3>Dano econômico</h3>
-            <p>Quando o prejuízo causado pela praga passa a ser maior que o custo do controle. É a lógica que evita aplicações por impulso.</p>
-          </article>
-          <article data-keywords="inimigos naturais predadores parasitoides">
-            <h3>Inimigos naturais</h3>
-            <p>Organismos que reduzem pragas, como joaninhas, crisopídeos, parasitoides, fungos e bactérias benéficas.</p>
-          </article>
-          <article data-keywords="parasitoide trichogramma ovos">
-            <h3>Parasitoide</h3>
-            <p>Organismo que se desenvolve em outro e impede sua reprodução. O Trichogramma, por exemplo, pode parasitar ovos de algumas pragas.</p>
-          </article>
-          <article data-keywords="resistencia inseticida modo acao">
-            <h3>Resistência</h3>
-            <p>Capacidade de uma população de pragas sobreviver a um método de controle repetido. Rotacionar modos de ação ajuda a reduzir esse risco.</p>
-          </article>
+          <article data-keywords="mip manejo integrado pragas"><h3>MIP</h3><p>Sistema que combina monitoramento, prevenção e diferentes formas de controle para reduzir perdas com menor impacto.</p></article>
+          <article data-keywords="nivel acao controle decisao"><h3>Nível de ação</h3><p>Ponto em que a população da praga justifica uma intervenção para evitar prejuízo. Varia conforme cultura, praga e fase da planta.</p></article>
+          <article data-keywords="dano economico prejuizo custo"><h3>Dano econômico</h3><p>Quando o prejuízo causado pela praga passa a ser maior que o custo do controle. É a lógica que evita aplicações por impulso.</p></article>
+          <article data-keywords="inimigos naturais predadores parasitoides"><h3>Inimigos naturais</h3><p>Organismos que reduzem pragas, como joaninhas, crisopídeos, parasitoides, fungos e bactérias benéficas.</p></article>
+          <article data-keywords="parasitoide trichogramma ovos"><h3>Parasitoide</h3><p>Organismo que se desenvolve em outro e impede sua reprodução. O Trichogramma pode parasitar ovos de algumas pragas.</p></article>
+          <article data-keywords="resistencia inseticida modo acao"><h3>Resistência</h3><p>Capacidade de uma população de pragas sobreviver a um método de controle repetido. Rotacionar modos de ação ajuda a reduzir esse risco.</p></article>
         </div>
-
         <p class="empty-state" id="glossary-empty" hidden>Nenhum termo encontrado. Tente uma palavra mais geral.</p>
       </section>
 
+      <!-- CHECKLIST -->
       <section class="section checklist-section" id="checklist">
         <div class="section-heading">
           <p class="section-kicker">Checklist de campo</p>
           <h2>Antes de recomendar qualquer controle, confira estes pontos.</h2>
         </div>
-
         <div class="checklist-layout">
           <div class="checklist-box">
             <label><input type="checkbox" /> Identifiquei corretamente a praga ou o dano.</label>
@@ -423,31 +537,26 @@
             <label><input type="checkbox" /> Considerei alternativas não químicas.</label>
             <label><input type="checkbox" /> Planejei reavaliação após a tomada de decisão.</label>
           </div>
-
           <aside class="progress-box">
             <p class="tag">Progresso</p>
             <strong id="check-progress">0 de 7 itens</strong>
-            <div class="progress-track" aria-hidden="true">
-              <span id="progress-bar"></span>
-            </div>
+            <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
             <p id="check-message">Comece pelo diagnóstico. Uma decisão boa nasce de uma observação bem feita.</p>
             <button class="button secondary full" id="copy-checklist" type="button">Copiar resumo</button>
           </aside>
         </div>
       </section>
 
+      <!-- FONTES -->
       <section class="section sources-section" id="fontes">
         <div class="section-heading left">
           <p class="section-kicker">Fontes e inspiração</p>
-          <h2>Conteúdo com base técnica e visual inspirado em portais do agro.</h2>
-          <p>
-            A estrutura foi inspirada em sites institucionais do setor, com navegação por temas, blocos de solução, foco em sustentabilidade e chamadas para decisão prática.
-          </p>
+          <h2>Conteúdo com base técnica.</h2>
+          <p>Referências usadas para construir o conteúdo educativo deste site.</p>
         </div>
-
         <div class="source-grid">
           <a href="https://www.epa.gov/ipm/introduction-integrated-pest-management" target="_blank" rel="noreferrer">
-            <strong>EPA - Integrated Pest Management</strong>
+            <strong>EPA — Integrated Pest Management</strong>
             <span>Conceitos de prevenção, monitoramento, nível de ação e controle.</span>
           </a>
           <a href="https://www.embrapa.br/" target="_blank" rel="noreferrer">
@@ -460,18 +569,20 @@
           </a>
           <a href="https://www.bayer.com.br/pt-br" target="_blank" rel="noreferrer">
             <strong>Bayer Brasil</strong>
-            <span>Inspiração de linguagem institucional e conexão entre agricultura, pessoas e planeta.</span>
+            <span>Linguagem institucional e conexão entre agricultura, pessoas e planeta.</span>
           </a>
         </div>
       </section>
+
     </main>
 
+    <!-- ── FOOTER ───────────────────────────────────── -->
     <footer class="site-footer">
       <div>
         <strong>AgroMIP</strong>
-        <p>Projeto educacional para o Agrinho. Informação, sustentabilidade e tomada de decisão no campo.</p>
+        <p>Projeto educacional para o Agrinho 2026. Informação, sustentabilidade e tomada de decisão no campo.</p>
       </div>
-      <a href="#inicio">Voltar ao topo</a>
+      <a href="#inicio">Voltar ao topo ↑</a>
     </footer>
 
     <script src="script.js"></script>
