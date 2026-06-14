@@ -1,1 +1,311 @@
-/* Full CSS from previous message */
+/* =====================================================
+   AGROMIP - STYLE.CSS COMPLETO (NÍVEL 4 - Agrinho 2026)
+   ===================================================== */
+
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --accent: #f9a825;
+  --text: #1f1f1f;
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --border: #e0e0e0;
+  --success: #43a047;
+  --warning: #f9a825;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --text: #e0e0e0;
+  --bg: #121212;
+  --card: #1e1e1e;
+  --border: #333;
+}
+
+/* ====================== RESET ====================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.4s, color 0.4s;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ====================== HEADER ====================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.topbar {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.nav-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.6rem;
+}
+
+.brand-mark {
+  font-size: 2.4rem;
+  margin-right: 12px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ====================== HERO ====================== */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+}
+
+.hero-content {
+  max-width: 650px;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-img-wrap img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ====================== SECTIONS ====================== */
+.section {
+  padding: 5rem 0;
+}
+
+.section-heading {
+  margin-bottom: 3rem;
+}
+
+.section-kicker {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+
+/* Summary Band */
+.summary-band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  background: var(--card);
+  padding: 3rem 0;
+}
+
+.summary-band article {
+  text-align: center;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.gallery-img-wrap {
+  position: relative;
+  height: 240px;
+}
+
+.gallery-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Crop Cards */
+.crop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+}
+
+.crop-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Decision Section */
+.decision-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Progress Bar */
+.progress-track {
+  height: 12px;
+  background: var(--border);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  background: var(--primary);
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.lightbox img {
+  max-width: 92%;
+  max-height: 92vh;
+  border-radius: 12px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+  
+  .main-nav {
+    display: none;
+  }
+  
+  .decision-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Botões */
+.button {
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.button.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+/* Animações Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
