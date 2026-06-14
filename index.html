@@ -76,7 +76,7 @@
         <article>
           <span>03</span>
           <h2>Decidir</h2>
-          <p>Comparar a infestação com o nível de ação e o estágio da cultura.</p>
+          <p>Comparar a infestation com o nível de ação e o estágio da cultura.</p>
         </article>
         <article>
           <span>04</span>
@@ -163,7 +163,7 @@
 
         <div class="crop-grid">
           <article class="crop-card crop-panel active" data-panel="soja">
-            <img src="assets/img/soja-saudavel.svg" alt="Ilustração de lavoura de soja saudável" />
+            <div class="crop-image-placeholder" style="background-color: #27643a; min-height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">[Imagem: Soja Saudável]</div>
             <div>
               <p class="tag">Soja</p>
               <h3>Percevejos e lagartas exigem monitoramento frequente.</h3>
@@ -185,7 +185,7 @@
           </article>
 
           <article class="crop-card crop-panel" data-panel="milho">
-            <img src="assets/img/milho-saudavel.svg" alt="Ilustração de lavoura de milho produtiva" />
+            <div class="crop-image-placeholder" style="background-color: #d99a2b; min-height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">[Imagem: Milho Saudável]</div>
             <div>
               <p class="tag">Milho</p>
               <h3>A lagarta-do-cartucho pede atenção no início do desenvolvimento.</h3>
@@ -207,7 +207,7 @@
           </article>
 
           <article class="crop-card crop-panel" data-panel="hortalicas">
-            <img src="assets/img/joaninha.svg" alt="Ilustração de joaninha, predadora natural" />
+            <div class="crop-image-placeholder" style="background-color: #1e5b77; min-height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">[Imagem: Joaninha / Aliada]</div>
             <div>
               <p class="tag">Hortaliças</p>
               <h3>Pulgões, mosca-branca e tripes crescem rápido em ambiente favorável.</h3>
@@ -241,7 +241,7 @@
 
         <div class="organism-grid">
           <article>
-            <img src="assets/img/lagarta.svg" alt="Ilustração de lagarta-do-cartucho" />
+            <div style="background: #e2e2e2; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">Lagarta-do-cartucho</div>
             <div>
               <p class="tag">Praga</p>
               <h3>Lagarta-do-cartucho</h3>
@@ -249,7 +249,7 @@
             </div>
           </article>
           <article>
-            <img src="assets/img/percevejomarrom.svg" alt="Ilustração de percevejo-marrom" />
+            <div style="background: #e2e2e2; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">Percevejo-marrom</div>
             <div>
               <p class="tag">Praga</p>
               <h3>Percevejo-marrom</h3>
@@ -257,7 +257,7 @@
             </div>
           </article>
           <article>
-            <img src="assets/img/tricograma.svg" alt="Ilustração de Trichogramma" />
+            <div style="background: #e2e2e2; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">Trichogramma</div>
             <div>
               <p class="tag">Aliado natural</p>
               <h3>Trichogramma</h3>
@@ -277,7 +277,7 @@
         </div>
 
         <div class="decision-layout">
-          <form class="decision-form" id="decision-form">
+          <form class="decision-form" id="decision-form" onsubmit="event.preventDefault();">
             <label>
               Cultura
               <select id="crop-select">
@@ -372,10 +372,10 @@
           </p>
         </div>
 
-        <label class="search-box">
-          Buscar termo
+        <div class="search-box">
+          <label for="glossary-search">Buscar termo</label>
           <input id="glossary-search" type="search" placeholder="Ex.: nível de ação, parasitoide, resistência" />
-        </label>
+        </div>
 
         <div class="glossary-grid" id="glossary-grid">
           <article data-keywords="mip manejo integrado pragas">

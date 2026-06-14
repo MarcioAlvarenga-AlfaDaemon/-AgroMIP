@@ -15,9 +15,13 @@ if (menuButton && mainNav) {
   });
 }
 
-const navLinks = [...document.querySelectorAll(".main-nav a")];
+// Alterado seletor de classe incorreta para pegar direto do ID nav
+const navLinks = [...document.querySelectorAll("#main-nav a")];
 const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
+  .map((link) => {
+    const targetId = link.getAttribute("href");
+    return targetId.startsWith("#") ? document.querySelector(targetId) : null;
+  })
   .filter(Boolean);
 
 const activeObserver = new IntersectionObserver(
@@ -108,7 +112,7 @@ const decisionText = document.querySelector("#decision-text");
 const decisionList = document.querySelector("#decision-list");
 
 function updateDecision() {
-  if (!cropSelect || !pressureSelect || !naturalSelect || !stageSelect) return;
+  if (!cropSelect || !pressureSelect || !naturalSelect || !stageSelect || !decisionTitle || !decisionText || !decisionList) return;
 
   const pressure = pressureSelect.value;
   const natural = naturalSelect.value;
