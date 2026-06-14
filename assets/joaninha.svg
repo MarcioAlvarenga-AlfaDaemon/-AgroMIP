@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Joaninha predadora natural</title>
+  <desc id="desc">Ilustracao de uma joaninha em uma planta.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f7f0"/>
+      <stop offset="1" stop-color="#91cf91"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="675" fill="url(#bg)"/>
+  <path d="M0 545 C180 430 330 480 460 405 C600 325 735 360 900 260 L900 675 L0 675Z" fill="#2e7d32"/>
+  <path d="M130 505 C300 405 560 385 785 450" fill="none" stroke="#a6d76d" stroke-width="28" stroke-linecap="round"/>
+  <g transform="translate(300 170)">
+    <ellipse cx="150" cy="175" rx="138" ry="126" fill="#d93628"/>
+    <path d="M150 58 L150 295" stroke="#231713" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="150" cy="54" r="52" fill="#221916"/>
+    <g fill="#221916">
+      <circle cx="88" cy="135" r="22"/>
+      <circle cx="215" cy="135" r="22"/>
+      <circle cx="105" cy="222" r="20"/>
+      <circle cx="195" cy="222" r="20"/>
+      <circle cx="150" cy="175" r="18"/>
+    </g>
+    <path d="M65 85 L5 35 M235 85 L295 35 M53 195 L-28 205 M247 195 L328 205" fill="none" stroke="#221916" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="132" cy="42" r="8" fill="#fff"/>
+    <circle cx="168" cy="42" r="8" fill="#fff"/>
+  </g>
+  <text x="48" y="72" fill="#1e4a20" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Joaninha</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Trichogramma parasitoide de ovos</title>
+  <desc id="desc">Ilustracao ampliada de microvespa Trichogramma perto de ovos de pragas.</desc>
+  <rect width="900" height="675" fill="#eef4dc"/>
+  <circle cx="710" cy="125" r="90" fill="#dceab3"/>
+  <circle cx="775" cy="190" r="52" fill="#c8dc8a"/>
+  <g transform="translate(210 165)">
+    <ellipse cx="185" cy="160" rx="118" ry="68" fill="#c49335"/>
+    <ellipse cx="290" cy="185" rx="82" ry="58" fill="#6a3f1e"/>
+    <circle cx="92" cy="150" r="55" fill="#5a351a"/>
+    <ellipse cx="205" cy="80" rx="112" ry="54" fill="#ffffff" opacity=".62" transform="rotate(-24 205 80)"/>
+    <ellipse cx="245" cy="97" rx="115" ry="50" fill="#ffffff" opacity=".5" transform="rotate(22 245 97)"/>
+    <path d="M83 210 L30 305 M150 220 L105 315 M250 225 L300 320 M325 222 L390 300" stroke="#3d2515" stroke-width="10" stroke-linecap="round"/>
+    <path d="M50 118 C8 70 -18 38 -54 15 M70 105 C35 44 30 18 12 -30" stroke="#3d2515" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <circle cx="75" cy="137" r="10" fill="#17100c"/>
+  </g>
+  <g fill="#fff7ca" stroke="#d8b85f" stroke-width="8">
+    <ellipse cx="560" cy="455" rx="50" ry="68"/>
+    <ellipse cx="640" cy="462" rx="50" ry="68"/>
+    <ellipse cx="720" cy="445" rx="50" ry="68"/>
+  </g>
+  <path d="M95 560 C240 480 380 510 500 430" fill="none" stroke="#68a441" stroke-width="24" stroke-linecap="round"/>
+  <text x="48" y="72" fill="#1e4a20" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Trichogramma</text>
+</svg>

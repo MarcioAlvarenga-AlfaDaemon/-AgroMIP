@@ -1,0 +1,40 @@
+/* 1. Remove margens e preenchimentos de todos os elementos */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Remove o comportamento estranho de altura em rolagens */
+html, body {
+  height: 100%;
+}
+
+/* 3. Melhora a legibilidade do texto base */
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* 4. Evita que imagens fiquem distorcidas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Remove estilos padrão de listas */
+ol, ul {
+  list-style: none;
+}
+
+/* 6. Herança de tipografia para inputs e botões */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Facilita o foco e remoção de bordas indesejadas em botões */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

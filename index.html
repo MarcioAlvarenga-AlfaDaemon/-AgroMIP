@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AgroMIP — Manejo Integrado de Pragas. Aprenda como proteger a lavoura com equilíbrio entre produção e meio ambiente." />
+    <meta name="author" content="AgroMIP" />
+    <title>AgroMIP — Manejo Integrado de Pragas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="light-mode">
+
+    <!-- ═══════════════════════════════════════════════
+         SPLASH SCREEN — animação de entrada
+    ════════════════════════════════════════════════ -->
+    <div id="splash" aria-hidden="true">
+      <div class="splash-content">
+        <div class="splash-leaf">🌿</div>
+        <h1 class="splash-title">AgroMIP</h1>
+        <p class="splash-sub">Carregando…</p>
+        <div class="splash-bar"><span id="splash-progress"></span></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         NAVBAR
+    ════════════════════════════════════════════════ -->
+    <header id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo" aria-label="Ir para o início">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">AgroMIP</span>
+        </a>
+
+        <nav aria-label="Navegação principal">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#o-que-e-mip">O que é MIP?</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#estatisticas">Estatísticas</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- Toggle modo escuro -->
+          <button id="theme-toggle" aria-label="Alternar modo escuro/claro" title="Alternar tema">
+            <span id="theme-icon">🌙</span>
+          </button>
+
+          <!-- Botão de conta -->
+          <button id="btn-account" aria-label="Minha conta" title="Minha conta">
+            <span id="account-icon">👤</span>
+            <span id="account-label">Entrar</span>
+          </button>
+
+          <!-- Menu hamburguer (mobile) -->
+          <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════
+         MAIN
+    ════════════════════════════════════════════════ -->
+    <main id="main-content">
+
+      <!-- ── SEÇÃO 1: HOME / HERO ────────────────────── -->
+      <section id="home" class="section hero-section" aria-label="Início">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-particle" style="--delay:0s;--x:10%;--y:20%"></div>
+          <div class="hero-particle" style="--delay:1s;--x:80%;--y:60%"></div>
+          <div class="hero-particle" style="--delay:2s;--x:50%;--y:80%"></div>
+          <div class="hero-particle" style="--delay:0.5s;--x:30%;--y:50%"></div>
+          <div class="hero-particle" style="--delay:1.5s;--x:70%;--y:30%"></div>
+        </div>
+
+        <div class="hero-content">
+          <span class="hero-eyebrow">Agrinho 2026 · Agro forte, futuro sustentável</span>
+          <h1 class="hero-title">
+            Produção com<br />
+            <em>equilíbrio</em>
+          </h1>
+          <p class="hero-desc">
+            O Manejo Integrado de Pragas (MIP) é a estratégia que une
+            eficiência produtiva e respeito ao meio ambiente.
+            Conheça, aprenda e pratique.
+          </p>
+          <div class="hero-cta">
+            <a href="#o-que-e-mip" class="btn btn-primary">Explorar o MIP</a>
+            <a href="#quiz" class="btn btn-outline">Fazer o Quiz</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-circle">
+            <span class="hero-emoji">🌾</span>
+          </div>
+        </div>
+
+        <a href="#o-que-e-mip" class="scroll-hint" aria-label="Rolar para baixo">
+          <span class="scroll-arrow">↓</span>
+        </a>
+      </section>
+
+      <!-- ── SEÇÃO 2: O QUE É MIP? ──────────────────── -->
+      <section id="o-que-e-mip" class="section mip-section" aria-label="O que é MIP?">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag">Conceito</span>
+            <h2 class="section-title">O que é o MIP?</h2>
+            <p class="section-subtitle">
+              Uma abordagem inteligente que combina técnicas para controlar
+              pragas causando o mínimo impacto possível ao ecossistema.
+            </p>
+          </div>
+
+          <!-- Infográfico dos 4 pilares -->
+          <div class="mip-pillars" role="list" aria-label="Os quatro pilares do MIP">
+
+            <article class="pillar-card" role="listitem" data-pillar="1">
+              <div class="pillar-icon" aria-hidden="true">🔍</div>
+              <h3 class="pillar-title">Monitoramento</h3>
+              <p class="pillar-desc">
+                Acompanhar regularmente a lavoura para identificar a presença
+                e o nível populacional das pragas antes de agir.
+              </p>
+            </article>
+
+            <article class="pillar-card" role="listitem" data-pillar="2">
+              <div class="pillar-icon" aria-hidden="true">📊</div>
+              <h3 class="pillar-title">Nível de Ação</h3>
+              <p class="pillar-desc">
+                Só aplicar controle quando a população da praga ultrapassa o
+                limite que causa dano econômico à cultura.
+              </p>
+            </article>
+
+            <article class="pillar-card" role="listitem" data-pillar="3">
+              <div class="pillar-icon" aria-hidden="true">🌿</div>
+              <h3 class="pillar-title">Controle Biológico</h3>
+              <p class="pillar-desc">
+                Usar inimigos naturais das pragas (predadores e parasitoides)
+                como aliados da produção sustentável.
+              </p>
+            </article>
+
+            <article class="pillar-card" role="listitem" data-pillar="4">
+              <div class="pillar-icon" aria-hidden="true">⚖️</div>
+              <h3 class="pillar-title">Tomada de Decisão</h3>
+              <p class="pillar-desc">
+                Integrar informações de campo para escolher o método de
+                controle mais eficaz e menos impactante.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SEÇÃO 3: GALERIA ────────────────────────── -->
+      <section id="galeria" class="section gallery-section" aria-label="Galeria de imagens">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag">Galeria</span>
+            <h2 class="section-title">Pragas, Aliados e Lavouras</h2>
+            <p class="section-subtitle">
+              Conheça os principais organismos envolvidos no MIP e veja
+              como uma lavoura saudável se parece.
+            </p>
+          </div>
+
+          <!-- Filtros da galeria -->
+          <div class="gallery-filters" role="group" aria-label="Filtrar galeria">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="pragas">Pragas</button>
+            <button class="filter-btn" data-filter="aliados">Aliados Naturais</button>
+            <button class="filter-btn" data-filter="lavoura">Lavouras</button>
+          </div>
+
+          <!-- Grid de cards da galeria -->
+          <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Imagens da galeria">
+
+            <article class="gallery-card" role="listitem" data-category="pragas">
+              <div class="gallery-img-wrap">
+                <img src="assets/img/lagarta.svg" alt="Lagarta-do-cartucho em folha de milho" loading="lazy" />
+                <div class="gallery-overlay">
+                  <button class="gallery-zoom" aria-label="Ampliar imagem de Lagarta-do-cartucho">🔍</button>
+                </div>
+              </div>
+              <div class="gallery-info">
+                <span class="gallery-cat">Praga</span>
+                <h3>Lagarta-do-cartucho</h3>
+                <p><em>Spodoptera frugiperda</em> — principal praga do milho no Brasil.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" role="listitem" data-category="pragas">
+              <div class="gallery-img-wrap">
+                <img src="assets/img/percevejomarrom.svg" alt="Percevejo-marrom em vagem de soja" loading="lazy" />
+                <div class="gallery-overlay">
+                  <button class="gallery-zoom" aria-label="Ampliar imagem de Percevejo-marrom">🔍</button>
+                </div>
+              </div>
+              <div class="gallery-info">
+                <span class="gallery-cat">Praga</span>
+                <h3>Percevejo-marrom</h3>
+                <p><em>Euschistus heros</em> — suga grãos de soja causando perdas significativas.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" role="listitem" data-category="aliados">
+              <div class="gallery-img-wrap">
+                <img src="assets/img/joaninha.svg" alt="Joaninha predando pulgão em planta" loading="lazy" />
+                <div class="gallery-overlay">
+                  <button class="gallery-zoom" aria-label="Ampliar imagem de Joaninha">🔍</button>
+                </div>
+              </div>
+              <div class="gallery-info">
+                <span class="gallery-cat">Aliado Natural</span>
+                <h3>Joaninha</h3>
+                <p><em>Cycloneda sanguinea</em> — predadora natural de pulgões e cochonilhas.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" role="listitem" data-category="aliados">
+              <div class="gallery-img-wrap">
+                <img src="assets/img/tricograma.svg" alt="Vespinha Trichogramma parasitando ovos" loading="lazy" />
+                <div class="gallery-overlay">
+                  <button class="gallery-zoom" aria-label="Ampliar imagem de Trichogramma">🔍</button>
+                </div>
+              </div>
+              <div class="gallery-info">
+                <span class="gallery-cat">Aliado Natural</span>
+                <h3>Trichogramma</h3>
+                <p>Microparasitoide que destrói ovos de pragas antes da eclosão.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" role="listitem" data-category="lavoura">
+              <div class="gallery-img-wrap">
+                <img src="assets/img/soja-saudavel.svg" alt="Lavoura de soja saudável sob céu azul" loading="lazy" />
+                <div class="gallery-overlay">
+                  <button class="gallery-zoom" aria-label="Ampliar imagem de lavoura de soja">🔍</button>
+                </div>
+              </div>
+              <div class="gallery-info">
+                <span class="gallery-cat">Lavoura</span>
+                <h3>Soja Saudável</h3>
+                <p>Lavoura de soja manejada com MIP — produtiva e com baixo uso de agrotóxicos.</p>
+              </div>
+            </article>
+
+            <article class="gallery-card" role="listitem" data-category="lavoura">
+              <div class="gallery-img-wrap">
+                <img src="assets/img/milho-saudavel.svg" alt="Espiga de milho em pé na lavoura" loading="lazy" />
+                <div class="gallery-overlay">
+                  <button class="gallery-zoom" aria-label="Ampliar imagem de lavoura de milho">🔍</button>
+                </div>
+              </div>
+              <div class="gallery-info">
+                <span class="gallery-cat">Lavoura</span>
+                <h3>Milho Produtivo</h3>
+                <p>O monitoramento constante garante espigas mais cheias e menor custo de produção.</p>
+              </div>
+            </article>
+
+          </div><!-- /gallery-grid -->
+
+          <!-- Lightbox -->
+          <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+            <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+            <img id="lightbox-img" src="" alt="" />
+            <p id="lightbox-caption"></p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SEÇÃO 4: ESTATÍSTICAS ───────────────────── -->
+      <section id="estatisticas" class="section stats-section" aria-label="Estatísticas do MIP">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag">Dados</span>
+            <h2 class="section-title">MIP em Números</h2>
+            <p class="section-subtitle">
+              Os resultados falam por si: sustentabilidade e produtividade
+              caminham juntas.
+            </p>
+          </div>
+
+          <div class="stats-grid" role="list" aria-label="Estatísticas do MIP">
+
+            <div class="stat-card" role="listitem">
+              <div class="stat-number" data-target="40" data-suffix="%">0%</div>
+              <p class="stat-label">redução no uso de agrotóxicos com MIP</p>
+            </div>
+
+            <div class="stat-card" role="listitem">
+              <div class="stat-number" data-target="3500" data-suffix="+">0</div>
+              <p class="stat-label">espécies de inimigos naturais cadastradas no Brasil</p>
+            </div>
+
+            <div class="stat-card" role="listitem">
+              <div class="stat-number" data-target="30" data-suffix="%">0%</div>
+              <p class="stat-label">de aumento médio na rentabilidade da lavoura</p>
+            </div>
+
+            <div class="stat-card" role="listitem">
+              <div class="stat-number" data-target="50" data-suffix=" anos">0</div>
+              <p class="stat-label">de pesquisa em MIP no Brasil</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SEÇÃO 5: QUIZ ───────────────────────────── -->
+      <section id="quiz" class="section quiz-section" aria-label="Quiz sobre MIP">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag">Interativo</span>
+            <h2 class="section-title">Teste seus Conhecimentos</h2>
+            <p class="section-subtitle">
+              Responda as perguntas e descubra o quanto você sabe sobre
+              Manejo Integrado de Pragas!
+            </p>
+          </div>
+
+          <div class="quiz-box" id="quiz-box">
+            <!-- Barra de progresso -->
+            <div class="quiz-progress" aria-label="Progresso do quiz">
+              <div class="quiz-progress-bar" id="quiz-progress-bar" style="width:0%"></div>
+            </div>
+            <p class="quiz-counter" id="quiz-counter">Pergunta 1 de 5</p>
+
+            <!-- Área da pergunta -->
+            <div class="quiz-question-area" id="quiz-question-area">
+              <h3 class="quiz-question" id="quiz-question"></h3>
+              <ul class="quiz-options" id="quiz-options" role="list"></ul>
+            </div>
+
+            <!-- Feedback -->
+            <div class="quiz-feedback" id="quiz-feedback" hidden>
+              <p id="quiz-feedback-text"></p>
+            </div>
+
+            <!-- Controles -->
+            <div class="quiz-controls">
+              <button class="btn btn-primary" id="quiz-next" disabled>Próxima →</button>
+            </div>
+
+            <!-- Resultado final -->
+            <div class="quiz-result" id="quiz-result" hidden>
+              <div class="result-emoji" id="result-emoji" aria-hidden="true"></div>
+              <h3 id="result-title"></h3>
+              <p id="result-score"></p>
+              <button class="btn btn-primary" id="quiz-restart">Jogar novamente</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SEÇÃO 6: CONTATO / NEWSLETTER ──────────── -->
+      <section id="contato" class="section contact-section" aria-label="Contato e newsletter">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-tag">Contato</span>
+            <h2 class="section-title">Fique por Dentro</h2>
+            <p class="section-subtitle">
+              Envie uma mensagem ou assine a newsletter para receber
+              novidades sobre MIP e agricultura sustentável.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+
+            <!-- Formulário de contato -->
+            <div class="contact-form-wrap">
+              <h3>Envie uma Mensagem</h3>
+              <div class="contact-form" id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contact-name">Nome *</label>
+                  <input type="text" id="contact-name" name="name" placeholder="Seu nome completo" autocomplete="name" required />
+                  <span class="form-error" id="error-name" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">E-mail *</label>
+                  <input type="email" id="contact-email" name="email" placeholder="seu@email.com" autocomplete="email" required />
+                  <span class="form-error" id="error-email" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">Assunto</label>
+                  <input type="text" id="contact-subject" name="subject" placeholder="Sobre o que quer falar?" />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message">Mensagem *</label>
+                  <textarea id="contact-message" name="message" rows="4" placeholder="Escreva sua mensagem aqui…" required></textarea>
+                  <span class="form-error" id="error-message" role="alert"></span>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="btn-send-contact">Enviar mensagem</button>
+                <div class="form-success" id="contact-success" hidden>
+                  ✅ Mensagem enviada com sucesso!
+                </div>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter-wrap">
+              <h3>Newsletter</h3>
+              <p>Receba conteúdos sobre MIP, sustentabilidade e inovação no campo diretamente no seu e-mail.</p>
+              <div class="newsletter-form" id="newsletter-form">
+                <div class="form-group">
+                  <label for="newsletter-name">Nome</label>
+                  <input type="text" id="newsletter-name" placeholder="Seu nome" />
+                </div>
+                <div class="form-group">
+                  <label for="newsletter-email">E-mail *</label>
+                  <input type="email" id="newsletter-email" placeholder="seu@email.com" required />
+                  <span class="form-error" id="error-newsletter" role="alert"></span>
+                </div>
+                <button type="button" class="btn btn-outline" id="btn-subscribe">Assinar newsletter</button>
+                <div class="form-success" id="newsletter-success" hidden>
+                  ✅ Inscrição realizada! Bem-vindo(a)!
+                </div>
+              </div>
+
+              <!-- Info de contato -->
+              <div class="contact-info">
+                <p>📧 <a href="mailto:contato@agromip.com.br">contato@agromip.com.br</a></p>
+                <p>📍 Paraná, Brasil</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main><!-- /main -->
+
+    <!-- ═══════════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════════ -->
+    <footer id="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="logo-icon" aria-hidden="true">🌿</span>
+          <span class="logo-text">AgroMIP</span>
+          <p>Produção com equilíbrio. Agro forte, futuro sustentável.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <a href="#home">Início</a>
+          <a href="#o-que-e-mip">O que é MIP?</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <p class="footer-copy">
+          © 2026 AgroMIP · Projeto Agrinho · Todos os direitos reservados
+        </p>
+      </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════
+         MODAL DE LOGIN / CONTA
+    ════════════════════════════════════════════════ -->
+    <div id="modal-auth" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-auth-title" hidden>
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+
+        <!-- Abas login / cadastro -->
+        <div class="modal-tabs" role="tablist" aria-label="Login ou Cadastro">
+          <button class="modal-tab active" role="tab" aria-selected="true" data-tab="login" id="tab-login">Entrar</button>
+          <button class="modal-tab" role="tab" aria-selected="false" data-tab="register" id="tab-register">Cadastrar</button>
+        </div>
+
+        <!-- Painel de login -->
+        <div class="modal-panel" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+          <h2 id="modal-auth-title">Bem-vindo de volta!</h2>
+          <div class="form-group">
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email" placeholder="seu@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Senha</label>
+            <input type="password" id="login-password" placeholder="Sua senha" autocomplete="current-password" />
+          </div>
+          <span class="form-error" id="error-login" role="alert"></span>
+          <button type="button" class="btn btn-primary full-width" id="btn-login">Entrar</button>
+        </div>
+
+        <!-- Painel de cadastro -->
+        <div class="modal-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register" hidden>
+          <h2>Crie sua conta</h2>
+          <div class="form-group">
+            <label for="reg-name">Nome</label>
+            <input type="text" id="reg-name" placeholder="Seu nome" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="reg-email">E-mail</label>
+            <input type="email" id="reg-email" placeholder="seu@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Senha</label>
+            <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" autocomplete="new-password" />
+          </div>
+          <span class="form-error" id="error-register" role="alert"></span>
+          <button type="button" class="btn btn-primary full-width" id="btn-register">Criar conta</button>
+        </div>
+
+        <!-- Painel logado -->
+        <div class="modal-panel" id="panel-logged" role="tabpanel" hidden>
+          <div class="logged-avatar" aria-hidden="true">👤</div>
+          <h2 id="logged-name">Olá!</h2>
+          <p id="logged-email-display"></p>
+          <div class="logged-stats">
+            <div class="logged-stat">
+              <span id="logged-quiz-score">—</span>
+              <small>Melhor pontuação no Quiz</small>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline full-width" id="btn-logout">Sair da conta</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         BOTÃO "VOLTAR AO TOPO"
+    ════════════════════════════════════════════════ -->
+    <button id="btn-top" aria-label="Voltar ao topo" title="Voltar ao topo" hidden>↑</button>
+
+    <!-- JavaScript principal -->
+    <script src="script.js"></script>
+  </body>
+</html>

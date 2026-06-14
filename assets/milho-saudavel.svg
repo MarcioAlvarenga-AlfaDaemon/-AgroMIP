@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Milho produtivo</title>
+  <desc id="desc">Ilustracao de uma espiga de milho em uma lavoura produtiva.</desc>
+  <rect width="900" height="675" fill="#d8f1c8"/>
+  <path d="M0 505 C160 430 320 450 450 385 C620 300 760 340 900 275 L900 675 L0 675Z" fill="#326f2f"/>
+  <g transform="translate(360 110)">
+    <path d="M88 430 C70 325 75 180 115 60" fill="none" stroke="#1f5d2b" stroke-width="24" stroke-linecap="round"/>
+    <path d="M112 290 C45 250 0 195 -28 115 C62 150 118 207 112 290Z" fill="#69a83c"/>
+    <path d="M115 315 C190 275 245 215 275 130 C185 160 120 225 115 315Z" fill="#7fbe47"/>
+    <g transform="translate(70 70)">
+      <ellipse cx="82" cy="150" rx="72" ry="146" fill="#f1c447"/>
+      <path d="M82 4 C35 45 15 95 20 160 C25 245 70 296 82 296 C94 296 139 245 144 160 C149 95 129 45 82 4Z" fill="none" stroke="#c49321" stroke-width="8"/>
+      <g fill="#ffd965" stroke="#c49321" stroke-width="4">
+        <circle cx="55" cy="75" r="14"/><circle cx="86" cy="75" r="14"/><circle cx="117" cy="75" r="14"/>
+        <circle cx="48" cy="112" r="14"/><circle cx="82" cy="112" r="14"/><circle cx="116" cy="112" r="14"/>
+        <circle cx="48" cy="150" r="14"/><circle cx="82" cy="150" r="14"/><circle cx="116" cy="150" r="14"/>
+        <circle cx="55" cy="188" r="14"/><circle cx="86" cy="188" r="14"/><circle cx="117" cy="188" r="14"/>
+        <circle cx="66" cy="225" r="14"/><circle cx="100" cy="225" r="14"/>
+      </g>
+    </g>
+  </g>
+  <text x="48" y="72" fill="#1e4a20" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Milho produtivo</text>
+</svg>

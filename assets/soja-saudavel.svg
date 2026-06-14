@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Lavoura de soja saudavel</title>
+  <desc id="desc">Ilustracao de uma lavoura de soja saudavel sob ceu azul.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#9dd7ff"/>
+      <stop offset=".7" stop-color="#dff5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="675" fill="url(#sky)"/>
+  <circle cx="740" cy="115" r="62" fill="#ffd36b"/>
+  <path d="M0 410 C190 360 345 365 520 385 C675 405 780 360 900 330 L900 675 L0 675Z" fill="#6da83f"/>
+  <g stroke="#2f6f34" stroke-width="7" stroke-linecap="round">
+    <path d="M90 650 C130 555 135 480 120 405"/>
+    <path d="M230 660 C255 552 265 490 250 405"/>
+    <path d="M370 660 C395 540 405 492 390 390"/>
+    <path d="M530 660 C555 545 565 495 548 390"/>
+    <path d="M690 660 C720 555 728 500 705 390"/>
+    <path d="M825 660 C850 545 850 500 830 380"/>
+  </g>
+  <g fill="#7fc653">
+    <ellipse cx="105" cy="470" rx="45" ry="22" transform="rotate(-28 105 470)"/>
+    <ellipse cx="140" cy="510" rx="42" ry="22" transform="rotate(24 140 510)"/>
+    <ellipse cx="260" cy="470" rx="48" ry="23" transform="rotate(-26 260 470)"/>
+    <ellipse cx="420" cy="462" rx="45" ry="22" transform="rotate(22 420 462)"/>
+    <ellipse cx="575" cy="470" rx="48" ry="23" transform="rotate(-24 575 470)"/>
+    <ellipse cx="730" cy="470" rx="44" ry="22" transform="rotate(22 730 470)"/>
+  </g>
+  <text x="48" y="72" fill="#1e4a20" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Soja saudavel</text>
+</svg>
