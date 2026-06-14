@@ -38,8 +38,6 @@ Entre as principais técnicas utilizadas estão:
 * Página informativa sobre o MIP;
 * Design responsivo para computadores e dispositivos móveis;
 * Galeria ilustrativa de pragas e inimigos naturais;
-* Quiz educativo;
-* Estatísticas animadas;
 * Tema claro e escuro;
 * Navegação intuitiva;
 * Recursos de acessibilidade;
