@@ -10,20 +10,22 @@
   <body class="light">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <!-- HEADER -->
+    <!-- ── HEADER ───────────────────────────────────────── -->
     <header class="site-header">
       <div class="topbar">
         <span>Projeto Agrinho 2026</span>
         <span>Guia educacional de campo</span>
       </div>
+
       <div class="nav-shell">
         <a class="brand" href="#inicio" aria-label="Ir para o início">
-          <span class="brand-mark" aria-hidden="true">🌱</span>
+          <span class="brand-mark" aria-hidden="true">A</span>
           <span>
             <strong>AgroMIP</strong>
             <small>Manejo Integrado de Pragas</small>
           </span>
         </a>
+
         <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
           <a href="#problema">Problema</a>
           <a href="#metodo">Método</a>
@@ -34,17 +36,25 @@
           <a href="#checklist">Checklist</a>
           <a href="#fontes">Fontes</a>
         </nav>
+
         <div class="nav-actions">
+          <!-- Saudação ao usuário -->
           <span id="greeting" class="greeting" aria-live="polite"></span>
+
+          <!-- Toggle modo escuro -->
           <button id="theme-toggle" class="icon-btn" aria-label="Alternar modo escuro e claro" title="Alternar tema">
             <span id="theme-icon">🌙</span>
           </button>
+
+          <!-- Hamburguer -->
           <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
             <span></span><span></span><span></span>
             <span class="sr-only">Abrir menu</span>
           </button>
         </div>
       </div>
+
+      <!-- Barra de nome do usuário (aparece na primeira visita) -->
       <div class="name-bar" id="name-bar">
         <div class="name-bar-inner">
           <label for="user-name-input">👋 Como podemos te chamar?</label>
@@ -54,7 +64,9 @@
       </div>
     </header>
 
+    <!-- ── MAIN ─────────────────────────────────────────── -->
     <main id="conteudo">
+
       <!-- HERO -->
       <section class="hero" id="inicio">
         <div class="hero-content">
@@ -70,10 +82,14 @@
             <a class="button secondary" href="#decisor">Usar matriz de decisão</a>
           </div>
         </div>
+
+        <!-- Imagem hero -->
         <div class="hero-img-wrap" aria-hidden="true">
-          <img src="images/hero/hero-lavoura-soja.webp"
-               alt="Lavoura de soja saudável com monitoramento MIP"
-               loading="eager" />
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80"
+            alt="Lavoura verde ao amanhecer representando agricultura sustentável"
+            loading="eager"
+          />
         </div>
       </section>
 
@@ -138,6 +154,7 @@
             químico podem fazer parte da estratégia, desde que a decisão venha do monitoramento.
           </p>
         </div>
+
         <div class="timeline">
           <article class="reveal">
             <span>1</span>
@@ -177,16 +194,20 @@
             da cultura e recomendação técnica local.
           </p>
         </div>
+
         <div class="tabs" role="tablist" aria-label="Culturas">
-          <button class="tab active" type="button" role="tab" aria-selected="true" data-crop="soja">Soja</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-crop="milho">Milho</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" data-crop="hortalicas">Hortaliças</button>
+          <button class="tab active" type="button" role="tab" aria-selected="true"  data-crop="soja">Soja</button>
+          <button class="tab"        type="button" role="tab" aria-selected="false" data-crop="milho">Milho</button>
+          <button class="tab"        type="button" role="tab" aria-selected="false" data-crop="hortalicas">Hortaliças</button>
         </div>
+
         <div class="crop-grid">
           <article class="crop-card crop-panel active" data-panel="soja">
-            <img src="images/culturas/soja-lavoura.webp"
-                 alt="Lavoura de soja saudável com vagens formadas"
-                 loading="lazy" />
+            <img
+              src="https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=700&q=80"
+              alt="Lavoura de soja saudável com vagens formadas"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Soja</p>
               <h3>Percevejos e lagartas exigem monitoramento frequente.</h3>
@@ -197,10 +218,13 @@
               </dl>
             </div>
           </article>
+
           <article class="crop-card crop-panel" data-panel="milho">
-            <img src="images/culturas/milho-lavoura.webp"
-                 alt="Espigas de milho em lavoura produtiva"
-                 loading="lazy" />
+            <img
+              src="https://images.unsplash.com/photo-1601593346740-925612772716?w=700&q=80"
+              alt="Espigas de milho em lavoura produtiva"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Milho</p>
               <h3>A lagarta-do-cartucho pede atenção no início do desenvolvimento.</h3>
@@ -211,10 +235,13 @@
               </dl>
             </div>
           </article>
+
           <article class="crop-card crop-panel" data-panel="hortalicas">
-            <img src="images/culturas/hortalicas-lavoura.webp"
-                 alt="Horta com hortaliças variadas e saudáveis"
-                 loading="lazy" />
+            <img
+              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=700&q=80"
+              alt="Horta com hortaliças variadas e saudáveis"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Hortaliças</p>
               <h3>Pulgões, mosca-branca e tripes crescem rápido em ambiente favorável.</h3>
@@ -235,18 +262,23 @@
           <h2>Pragas, aliados e lavouras em imagens.</h2>
           <p>Identificar corretamente evita confundir dano, praga e aliado natural.</p>
         </div>
+
         <div class="gallery-filters" role="group" aria-label="Filtrar galeria">
           <button class="filter-btn active" data-filter="all">Todos</button>
           <button class="filter-btn" data-filter="praga">Pragas</button>
           <button class="filter-btn" data-filter="aliado">Aliados</button>
           <button class="filter-btn" data-filter="lavoura">Lavouras</button>
         </div>
+
         <div class="gallery-grid" id="gallery-grid">
+
           <article class="gallery-card reveal" data-category="praga">
             <div class="gallery-img-wrap">
-              <img src="images/pragas/lagarta-cartucho.webp"
-                   alt="Lagarta-do-cartucho Spodoptera frugiperda em folha de milho"
-                   loading="lazy" />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Spodoptera_frugiperda_caterpillar.jpg/640px-Spodoptera_frugiperda_caterpillar.jpg"
+                alt="Lagarta-do-cartucho Spodoptera frugiperda em folha de milho"
+                loading="lazy"
+              />
               <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
             </div>
             <div class="gallery-info">
@@ -255,11 +287,14 @@
               <p><em>Spodoptera frugiperda</em> — principal praga do milho no Brasil.</p>
             </div>
           </article>
+
           <article class="gallery-card reveal" data-category="praga">
             <div class="gallery-img-wrap">
-              <img src="images/pragas/percevejo-marrom.webp"
-                   alt="Percevejo-marrom Euschistus heros sobre superfície"
-                   loading="lazy" />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Euschistus_heros_MHNT.jpg/640px-Euschistus_heros_MHNT.jpg"
+                alt="Percevejo-marrom Euschistus heros sobre superfície"
+                loading="lazy"
+              />
               <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
             </div>
             <div class="gallery-info">
@@ -268,11 +303,14 @@
               <p><em>Euschistus heros</em> — suga grãos de soja causando perdas significativas.</p>
             </div>
           </article>
+
           <article class="gallery-card reveal" data-category="aliado">
             <div class="gallery-img-wrap">
-              <img src="images/aliados/joaninha.webp"
-                   alt="Joaninha Cycloneda sanguinea sobre folha verde"
-                   loading="lazy" />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coccinella_magnifica01.jpg/640px-Coccinella_magnifica01.jpg"
+                alt="Joaninha Cycloneda sanguinea sobre folha verde"
+                loading="lazy"
+              />
               <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
             </div>
             <div class="gallery-info">
@@ -281,11 +319,14 @@
               <p>Predadora natural de pulgões e cochonilhas em diversas culturas.</p>
             </div>
           </article>
+
           <article class="gallery-card reveal" data-category="aliado">
             <div class="gallery-img-wrap">
-              <img src="images/aliados/crisopideo.webp"
-                   alt="Crisopídeo Chrysoperla carnea, inseto verde de asas transparentes"
-                   loading="lazy" />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Chrysoperla_carnea_Stephens%2C_1836.jpg/640px-Chrysoperla_carnea_Stephens%2C_1836.jpg"
+                alt="Crisopídeo Chrysoperla carnea, inseto verde de asas transparentes"
+                loading="lazy"
+              />
               <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
             </div>
             <div class="gallery-info">
@@ -294,11 +335,14 @@
               <p><em>Chrysoperla carnea</em> — predador de ovos e larvas de diversas pragas.</p>
             </div>
           </article>
+
           <article class="gallery-card reveal" data-category="lavoura">
             <div class="gallery-img-wrap">
-              <img src="images/lavouras/soja-saudavel.webp"
-                   alt="Lavoura de soja verde saudável ao sol"
-                   loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1535379453347-1ffd615e2e08?w=640&q=75"
+                alt="Lavoura de soja verde saudável ao sol"
+                loading="lazy"
+              />
               <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
             </div>
             <div class="gallery-info">
@@ -307,11 +351,14 @@
               <p>Lavoura manejada com MIP — produtiva e com baixo uso de agrotóxicos.</p>
             </div>
           </article>
+
           <article class="gallery-card reveal" data-category="lavoura">
             <div class="gallery-img-wrap">
-              <img src="images/lavouras/milho-produtivo.webp"
-                   alt="Espigas de milho amarelas prontas para colheita"
-                   loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1601593346740-925612772716?w=640&q=75"
+                alt="Espigas de milho amarelas prontas para colheita"
+                loading="lazy"
+              />
               <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
             </div>
             <div class="gallery-info">
@@ -320,7 +367,9 @@
               <p>Monitoramento constante garante espigas mais cheias e menor custo de produção.</p>
             </div>
           </article>
+
         </div>
+
         <!-- Lightbox -->
         <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
           <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
@@ -336,11 +385,14 @@
           <h2>Organismos que aparecem nas decisões de manejo.</h2>
           <p>Identificar corretamente evita confundir dano, praga e aliado natural.</p>
         </div>
+
         <div class="organism-grid">
           <article class="reveal">
-            <img src="images/pragas/lagarta-cartucho.webp"
-                 alt="Lagarta-do-cartucho Spodoptera frugiperda"
-                 loading="lazy" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Spodoptera_frugiperda_caterpillar.jpg/640px-Spodoptera_frugiperda_caterpillar.jpg"
+              alt="Lagarta-do-cartucho Spodoptera frugiperda"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Praga</p>
               <h3>Lagarta-do-cartucho</h3>
@@ -348,9 +400,11 @@
             </div>
           </article>
           <article class="reveal">
-            <img src="images/pragas/percevejo-marrom.webp"
-                 alt="Percevejo-marrom Euschistus heros"
-                 loading="lazy" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Euschistus_heros_MHNT.jpg/640px-Euschistus_heros_MHNT.jpg"
+              alt="Percevejo-marrom Euschistus heros"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Praga</p>
               <h3>Percevejo-marrom</h3>
@@ -358,9 +412,11 @@
             </div>
           </article>
           <article class="reveal">
-            <img src="images/aliados/joaninha.webp"
-                 alt="Joaninha predadora natural"
-                 loading="lazy" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Coccinella_magnifica01.jpg/640px-Coccinella_magnifica01.jpg"
+              alt="Joaninha predadora natural"
+              loading="lazy"
+            />
             <div>
               <p class="tag">Aliado natural</p>
               <h3>Joaninha</h3>
@@ -380,6 +436,7 @@
             níveis de ação e produtos com assistência técnica habilitada.
           </p>
         </div>
+
         <div class="decision-layout">
           <form class="decision-form" id="decision-form">
             <label>Cultura
@@ -410,6 +467,7 @@
               </select>
             </label>
           </form>
+
           <article class="recommendation" aria-live="polite">
             <p class="tag">Resultado</p>
             <h3 id="decision-title">Monitorar e registrar</h3>
@@ -446,10 +504,12 @@
           <h2>Glossário técnico do MIP.</h2>
           <p>Pesquise termos importantes para entender textos técnicos e relatórios de campo.</p>
         </div>
+
         <label class="search-box">
           Buscar termo
           <input id="glossary-search" type="search" placeholder="Ex.: nível de ação, parasitoide, resistência" />
         </label>
+
         <div class="glossary-grid" id="glossary-grid">
           <article data-keywords="mip manejo integrado pragas"><h3>MIP</h3><p>Sistema que combina monitoramento, prevenção e diferentes formas de controle para reduzir perdas com menor impacto.</p></article>
           <article data-keywords="nivel acao controle decisao"><h3>Nível de ação</h3><p>Ponto em que a população da praga justifica uma intervenção para evitar prejuízo. Varia conforme cultura, praga e fase da planta.</p></article>
@@ -513,9 +573,10 @@
           </a>
         </div>
       </section>
+
     </main>
 
-    <!-- FOOTER -->
+    <!-- ── FOOTER ───────────────────────────────────── -->
     <footer class="site-footer">
       <div>
         <strong>AgroMIP</strong>
