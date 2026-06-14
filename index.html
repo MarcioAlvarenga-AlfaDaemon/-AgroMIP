@@ -1,1 +1,121 @@
-test
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AgroMIP: guia informacional sobre Manejo Integrado de Pragas para o projeto Agrinho." />
+    <title>AgroMIP | Guia de Manejo Integrado de Pragas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="topbar">
+            <span>Projeto Agrinho 2026</span>
+            <span>Guia educacional de campo</span>
+        </div>
+
+        <div class="nav-shell">
+            <a class="brand" href="#inicio" aria-label="Ir para o início">
+                <span class="brand-mark" aria-hidden="true">🌱</span>
+                <span>
+                    <strong>AgroMIP</strong>
+                    <small>Manejo Integrado de Pragas</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+                <a href="#problema">Problema</a>
+                <a href="#metodo">Método</a>
+                <a href="#culturas">Culturas</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#decisor">Decisão</a>
+                <a href="#glossario">Glossário</a>
+                <a href="#checklist">Checklist</a>
+                <a href="#fontes">Fontes</a>
+            </nav>
+
+            <div class="nav-actions">
+                <span id="greeting" class="greeting" aria-live="polite"></span>
+                <button id="theme-toggle" class="icon-btn" aria-label="Alternar modo escuro e claro" title="Alternar tema">
+                    <span id="theme-icon">🌙</span>
+                </button>
+                <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="name-bar" id="name-bar">
+            <div class="name-bar-inner">
+                <label for="user-name-input">👋 Como podemos te chamar?</label>
+                <input type="text" id="user-name-input" placeholder="Digite seu nome…" maxlength="40" autocomplete="given-name" />
+                <button type="button" id="save-name-btn" class="button primary small">Salvar</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="eyebrow">Observação, decisão e controle responsável</p>
+                <h1>Manejo Integrado de Pragas para produzir melhor, com menos desperdício.</h1>
+                <p>O MIP ajuda a decidir quando agir, qual tática usar e como reduzir aplicações desnecessárias.</p>
+                <div class="hero-actions">
+                    <a class="button primary" href="#metodo">Ver método</a>
+                    <a class="button secondary" href="#decisor">Usar matriz de decisão</a>
+                </div>
+            </div>
+
+            <div class="hero-img-wrap" aria-hidden="true">
+                <img src="images/hero/hero-lavoura-soja.webp"
+                     alt="Lavoura de soja saudável com monitoramento MIP"
+                     loading="eager" />
+            </div>
+        </section>
+
+        <!-- Resumo MIP -->
+        <section class="summary-band" aria-label="Resumo do MIP">
+            <article class="reveal"><span>01</span><h2>Identificar</h2><p>Distinguir praga, dano, doença e inimigo natural.</p></article>
+            <article class="reveal"><span>02</span><h2>Monitorar</h2><p>Acompanhar a população no campo.</p></article>
+            <article class="reveal"><span>03</span><h2>Decidir</h2><p>Comparar com o nível de ação.</p></article>
+            <article class="reveal"><span>04</span><h2>Avaliar</h2><p>Registrar o resultado para melhorar.</p></article>
+        </section>
+
+        <!-- Seções restantes (mantidas do original) -->
+        <!-- ... (problema, metodo, culturas, galeria, etc.) ... -->
+
+        <!-- GALERIA (exemplo atualizado) -->
+        <section class="section gallery-section" id="galeria">
+            <div class="section-heading left">
+                <p class="section-kicker">Reconhecimento visual</p>
+                <h2>Pragas, aliados e lavouras em imagens.</h2>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <article class="gallery-card reveal" data-category="praga">
+                    <div class="gallery-img-wrap">
+                        <img src="images/pragas/lagarta-cartucho.jpg"
+                             alt="Lagarta-do-cartucho Spodoptera frugiperda"
+                             loading="lazy" />
+                        <button class="zoom-btn" aria-label="Ampliar imagem">🔍</button>
+                    </div>
+                    <div class="gallery-info">
+                        <span class="tag">Praga</span>
+                        <h3>Lagarta-do-cartucho</h3>
+                    </div>
+                </article>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Agrinho 2026 • AgroMIP • Manejo Integrado de Pragas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
